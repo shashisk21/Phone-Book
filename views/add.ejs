@@ -1,0 +1,67 @@
+<!-- views/add.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Add Contact</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    form {
+      text-align: center;
+      padding: 80px;
+      margin-top: 100px;
+    }
+
+    #name {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(199, 194, 194);
+      outline: none;
+    }
+
+    #number {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(199, 194, 194);
+      margin-top: 20px;
+      outline: none;
+    }
+
+    #submit {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(136, 1, 1);
+      margin-top: 20px;
+      color: white;
+      margin-right: -20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="/add" method="POST">
+    <h1 style="text-align: center;margin-right: -20px;">Add Contact</h1>
+    <label for="name">Name:</label>
+    <input type="text" name="name" required id="name"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" required id="number"><br>
+
+
+
+    <input type="submit" value="Add Contact" id="submit">
+  </form>
+</body>
+
+</html>

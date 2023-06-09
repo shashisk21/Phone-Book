@@ -1,0 +1,67 @@
+<!-- views/edit.ejs -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Edit Contact</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      padding: 0;
+      margin: 0;
+
+    }
+
+    form {
+      text-align: center;
+      padding: 80px;
+      margin-top: 100px;
+    }
+
+    #name {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(199, 194, 194);
+      outline: none;
+    }
+
+    #number {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(199, 194, 194);
+      margin-top: 20px;
+      outline: none;
+    }
+
+    #submit {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 5px;
+      background-color: rgb(136, 1, 1);
+      margin-top: 20px;
+      color: white;
+      margin-right: -20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form action="/edit/<%= contact._id %>" method="POST">
+    <h1>Edit Contact</h1>
+    <label for="name">Name:</label>
+    <input type="text" name="name" value="<%= contact.name %>" required id="name"><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" name="phone" value="<%= contact.phone %>" required id="number"><br>
+
+
+
+    <input type="submit" value="Update Contact" id="submit">
+  </form>
+</body>
+
+</html>
